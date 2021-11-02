@@ -7,7 +7,7 @@ const registerProduct = async(req, res) => {
 
     const existingProduct = await product.findOne({ name: req.body.name });
     if (existingProduct) {
-        return res.status(400).send("Product already exists");
+        return res.status(400).send("Error: Product already exists");
     }
 
     const productSchema = new product({

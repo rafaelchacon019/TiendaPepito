@@ -7,7 +7,9 @@ import product from "./routes/productRoute.js";
 dotenv.config();
 
 const app = express();
+
 app.use(express.json());
+// Reglas de conexión entre front y back
 app.use(cors());
 app.use("/api/product", product);
 
